@@ -25,7 +25,6 @@ import {
   Link2,
   Bot,
   Target,
-  PenTool,
 } from "lucide-react";
 import {
   CustomCursor,
@@ -35,6 +34,8 @@ import {
 } from "@/components/site/Atmosphere";
 import { MagneticButton, Reveal, SectionLabel } from "@/components/site/atoms";
 import { ConceptCard, concepts } from "@/components/site/Portfolio";
+import { TouchGlow, HapticFeedback, MotionParallax } from "@/components/site/MobileEffects";
+import logoImg from "@/assets/logo-studiotech.jpg";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -144,6 +145,9 @@ function Home() {
     <div className="relative min-h-screen overflow-x-hidden bg-background">
       <LoadingScreen />
       <CustomCursor />
+      <TouchGlow />
+      <HapticFeedback />
+      <MotionParallax />
 
       {/* NAV */}
       <header
@@ -157,9 +161,7 @@ function Home() {
           }`}
         >
           <a href="#top" className="flex min-w-0 items-center gap-2.5">
-            <span className="grid size-9 shrink-0 place-items-center rounded-xl bg-[image:var(--gradient-blue)] shadow-[var(--glow-sm)]">
-              <PenTool className="size-4.5" aria-hidden="true" />
-            </span>
+            <img src={logoImg} alt="StudioTech Logo" className="size-9 shrink-0 rounded-xl object-cover shadow-[var(--glow-sm)]" />
             <span className="truncate font-display text-lg font-extrabold tracking-tight">
               Studio<span className="text-gradient">Tech</span>
             </span>
@@ -210,9 +212,7 @@ function Home() {
             transition={{ duration: 1.2, delay: 1.4, ease: [0.16, 1, 0.3, 1] }}
             className="mx-auto flex w-fit items-center gap-3"
           >
-            <span className="grid size-12 place-items-center rounded-2xl bg-[image:var(--gradient-blue)] shadow-[var(--glow-md)] sm:size-14">
-              <PenTool className="size-6 sm:size-7" aria-hidden="true" />
-            </span>
+            <img src={logoImg} alt="StudioTech Logo" className="size-12 rounded-2xl object-cover shadow-[var(--glow-md)] sm:size-14" />
             <span className="font-display text-2xl font-extrabold tracking-tight sm:text-3xl">
               Studio<span className="text-gradient">Tech</span>
             </span>
@@ -224,9 +224,9 @@ function Home() {
             transition={{ duration: 1.1, delay: 1.65, ease: [0.16, 1, 0.3, 1] }}
             className="mt-8 text-[2rem] leading-[1.05] font-extrabold sm:text-5xl lg:text-6xl xl:text-7xl"
           >
-            Nós não vendemos sites.
+            Seu sucesso de clientes começa aqui!
             <span className="mt-3 block text-gradient text-[1.35rem] leading-[1.25] sm:text-3xl lg:text-4xl xl:text-[2.75rem]">
-              Construímos experiências digitais que geram autoridade, atraem clientes e aumentam
+              Criamos experiências digitais que geram autoridade, atraem clientes e aumentam
               vendas.
             </span>
           </motion.h1>
@@ -577,9 +577,7 @@ function Home() {
       <footer className="border-t border-border/60 py-10">
         <div className="mx-auto grid max-w-7xl grid-cols-[minmax(0,1fr)_auto] items-center gap-4 px-5 sm:px-8">
           <div className="flex min-w-0 items-center gap-2.5">
-            <span className="grid size-8 shrink-0 place-items-center rounded-lg bg-[image:var(--gradient-blue)]">
-              <PenTool className="size-4" aria-hidden="true" />
-            </span>
+            <img src={logoImg} alt="StudioTech Logo" className="size-8 shrink-0 rounded-lg object-cover" />
             <span className="truncate font-display text-sm font-extrabold">
               Studio<span className="text-gradient">Tech</span>
             </span>

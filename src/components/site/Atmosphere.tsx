@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react";
+import logoImg from "@/assets/logo-studiotech.jpg";
 
 /** Campo de partículas em canvas + linhas luminosas. Pausa fora da viewport. */
 export function ParticleField() {
@@ -161,9 +162,7 @@ export function LoadingScreen() {
       style={{ visibility: done ? "hidden" : "visible" }}
     >
       <div className="text-center">
-        <div className="font-display text-2xl font-extrabold tracking-tight sm:text-3xl">
-          Studio<span className="text-gradient">Tech</span>
-        </div>
+        <img src={logoImg} alt="StudioTech" className="mx-auto h-12 w-auto object-contain" />
         <div className="mx-auto mt-5 h-px w-40 overflow-hidden bg-border">
           <div className="h-px w-1/3 animate-[marquee-x_1.2s_linear_infinite] bg-[image:var(--gradient-blue)]" />
         </div>
